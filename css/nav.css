@@ -24,6 +24,9 @@
 }*/
 .header__navbar-pc{
     position:fixed;
+    margin: 0;
+    left: 0;
+    right: 0;
 }
 .header__navbar-list{
     list-style-type: none;
