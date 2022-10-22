@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực đơn</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <script src="https://kit.fontawesome.com/b6ffadb76e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./font-css/awe-some css/fontawesome.min.css">
+    <link rel="stylesheet" href="./font-css/themify font/themify-icons.css">
+</head>
+<body>
+    <style>
+        .container{
+            position: relative;
+        }
+        #product-sidebar{
+            position: sticky;
+            z-index: 998;
+            font-size: 2rem;
+            top: 6rem;
+            max-width: 25%;
+        }
+        .product-wrap{ 
+            max-width: 75%;
+            margin-left: 30%;
+            position: relative;
+            top: -8rem;
+        }
+        ul#product-sidebar{
+            padding-left: 10rem;
+            margin-top: 2.5rem;
+        }
+        ul#product-sidebar li{
+            list-style: none;
+            line-height: 1.5;
+        }
+        .product-wrap::before{
+            content: "";
+            position: absolute;
+            border-left: 2px solid rgba(24, 23, 23, 0.76);
+            top: -0.5rem;
+            left: -5rem;
+            height: 101%;
+        }        
+        .headline h3{
+            box-sizing: unset;
+            transform: translate(20%);
+            display: inline-block;
+            font-size: 40px;
+            margin-bottom: 2rem;          
+        }
+        ul#product-sidebar a{
+         color: rgba(0, 0, 0, 0.76);
+            font-weight: 550;
+        }
+        a{  
+            text-decoration: none;
+        }
+        ul.product{
+            display: flex;
+            list-style: none;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            margin-bottom: 25px;
+        }
+        ul.product li{
+            flex-basis: 28%;
+            margin-right: 30px;
+        }
+        ul.product li img{
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .product-item{
+            margin-left: 25px;
+        }
+        .product-infor{
+            display: block;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+
+        .product-item .product-infor .product-name{
+            display: inline-block;
+            color: black;
+            font-weight: bolder;
+            margin-bottom: 1rem;
+        }
+        .product-img{
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+        .product-thumb img{
+            display: block;
+        }
+        ul.product li:hover .product-img img{
+            filter: opacity(0.8);
+        }
+        a.detail{
+            display: block;
+            padding: 10px 0px;
+            background-color: rgb(39, 165, 250);
+            opacity: 0.75;
+            text-align: center;
+            text-transform: uppercase;
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            width: 100%;
+            bottom: -43px;
+            transition: 0.25s;
+            border-bottom-left-radius:10px ;
+            border-bottom-right-radius:10px ;
+        }
+        ul.product li:hover a.detail{
+            bottom: 0px;
+        }
+        li.icoin-style{
+            list-style-image:url('images/icoin/cb.png') !important;
+        }
+        a.title-sidebar{
+            color: chocolate !important; 
+            font-size: 2.5rem;
+        }
+        </style>
+    <!-- THANH ĐIỀU HƯỚNG -->
+    <div class="header">
+        <div class="grid wide">
+            <nav class="header__navbar-pc">
+                <ul class="header__navbar-list">
+                    <li class="header__navbar-item">
+                        <div class="header__nav-scoffee ">S.COFFEE</div>
+                    </li>
+                    <li class="header__navbar-item"><a class="header__navbar-item-link active__navbar " href="main.html">Trang chủ</a></li>
+                    <li class="header__navbar-item"><a class="header__navbar-item-link"  href="thucdon.html">Thực đơn</a></li>
+                    <li class="header__navbar-item"><a class="header__navbar-item-link"  href="introduct.html">Thông tin</a></li>
+                    <li class="header__navbar-item"><a class="header__navbar-item-link"  href="book.html">Đặt bàn</a></li>
+                    <li class="header__navbar-item" >  
+                        <label for="nav-mobile-input" class="nav__bar-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+                        </label>     
+                    </li>
+                </ul>
+            </nav>
+            <input type="checkbox" name="" hidden class="nav-input" id="nav-mobile-input">
+            <label for="nav-mobile-input" class="nav__overlay"></label>
+            <nav class="header__navbar-mobile">
+                <label for="nav-mobile-input" class="nav__mobile-closed">                                           
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) --><path d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"/></svg>
+                </label>
+                <ul class="header__navbar-mobile-list">
+                    <li class="header__navbar-mobile-item"><a class="header__navbar-mobile-item-link" href="main.html">Trang chủ</a></li>
+                    <li class="header__navbar-mobile-item"><a class="header__navbar-mobile-item-link"  href="thucdon.html">Thực đơn</a></li>
+                    <li class="header__navbar-mobile-item"><a class="header__navbar-mobile-item-link"  href="introduct.html">Thông tin</a></li>
+                    <li class="header__navbar-mobile-item"><a class="header__navbar-mobile-item-link"  href="book.html">Đặt bàn</a></li>
+                </ul>
+            </nav>      
+        </div>
+        </div> 
+    <!-- END NAV -->
+    <div class="container">
+            <ul id="product-sidebar">
+                <li><a href="thucdon.html" >Tất cả</a></li>
+                    <li class="icoin-style"><a class="title-sidebar" href="caphe.html">Cà Phê</a></li>
+                <li><a href="banh-snack.html">Bánh & Snack</a></li>
+            </ul>
+        <!-- BEGIN: Product -->
+        <div class="product-wrap">
+            <!-- BEGIN: Cà Phê -->
+            <div class="headline">
+                <h3>Cà Phê</h3>
+            </div>
+            <ul class="product">
+                <li>
+                    <div class="product-item">
+                        <div class="product-img">
+                            <a href="" class="product-thumb">
+                                <img src="images/loaicaphe/i1.png" alt="Bạc sỉu">
+                            </a>
+                            <a href="" class="detail">Chi tiết</a>
+                        </div>
+                        <div class="product-infor">
+                            <a href="" class="product-name">Bạc sỉu</a>
+                            <div class="product-price">Giá: <strong>30.000 VNĐ</strong></div>
+                        </div>
+                   
+                    </div>
+                </li>
+                <li>
+                    <div class="product-item">
+                        <div class="product-img">
+                            <a href="" class="product-thumb">
+                                <img src="images/loaicaphe/i2.png" alt="Cà phê đen">
+                            </a>
+                            <a href="" class="detail">Chi tiết</a>
+                        </div>
+                        <div class="product-infor">
+                            <a href="" class="product-name">Cà phê đen</a>
+                            <div class="product-price">Giá: <strong>35.000 VNĐ</strong></div>
+                        </div>
+                   
+                    </div>
+                </li>
+                <li>
+                    <div class="product-item">
+                        <div class="product-img">
+                            <a href="" class="product-thumb">
+                                <img src="images/loaicaphe/i3.png" alt="Cà phê sữa đá">
+                            </a>
+                            <a href="" class="detail">Chi tiết</a>
+                        </div>
+                        <div class="product-infor">
+                            <a href="" class="product-name">Cà phê sữa đá</a>
+                            <div class="product-price">Giá: <strong>30.000 VNĐ</strong></div>
+                        </div>
+                   
+                    </div>
+                </li>
+                <li>
+                    <div class="product-item">
+                        <div class="product-img">
+                            <a href="" class="product-thumb">
+                                <img src="images/loaicaphe/i4.png" alt="Capuchino">
+                            </a>
+                            <a href="" class="detail">Chi tiết</a>
+                        </div>
+                        <div class="product-infor">
+                            <a href="" class="product-name">Capuchino</a>
+                            <div class="product-price">Giá: <strong>35.000 VNĐ</strong></div>
+                        </div>
+                   
+                    </div>
+                </li>
+                <li>
+                    <div class="product-item">
+                        <div class="product-img">
+                            <a href="" class="product-thumb">
+                                <img src="images/loaicaphe/i5.png" alt="Caramel Machiato">
+                            </a>
+                            <a href="" class="detail">Chi tiết</a>
+                        </div>
+                        <div class="product-infor">
+                            <a href="" class="product-name">Caramel Machiato</a>
+                            <div class="product-price">Giá: <strong>40.000 VNĐ</strong></div>
+                        </div>
+                   
+                    </div>
+                </li>
+                <li>
+                    <div class="product-item">
+                        <div class="product-img">
+                            <a href="" class="product-thumb">
+                                <img src="images/loaicaphe/i6.png" alt="Latte">
+                            </a>
+                            <a href="" class="detail">Chi tiết</a>
+                        </div>
+                        <div class="product-infor">
+                            <a href="" class="product-name">Latte</a>
+                            <div class="product-price">Giá: <strong>35.000 VNĐ</strong></div>
+                        </div>
+                   
+                    </div>
+                </li>
+            </ul>
+            <!-- END: Cà phê -->
+    </div>
+</div>
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="facebook">
+            <a class="fb" href="#">
+                <span class="fa-brands fa-facebook-f"></span>
+            </a>
+        </div>
+        <div class="instagram">
+            <a class="ins" href="#">
+                <span class="fa-brands fa-instagram"></span>
+            </a>
+        </div>
+        <div class="youtube">
+            <a class="ytb" href="#">
+                <span class="fa-brands fa-youtube"></span>
+            </a>
+        </div>
+        <div class="copyright">© 2022 S.Coffee Allright Reserved</div>
+        <div class="paperplane">
+                <a class="register" href="#" >
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span style="margin-left:15px;">  Đăng kí để nhận tin tức sớm nhất</span>
+                </a>      
+        </div>
+        <div class="email">
+            <a class="sendmail" href="#">
+                <span class="fa-solid fa-envelope" ></span>
+                <span style="margin-left:15px;">customerservice@scoffee.com</span>
+            </a>
+        </div> 
+</footer>
+</body>
+</html>
