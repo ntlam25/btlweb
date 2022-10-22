@@ -50,9 +50,9 @@ a.header__navbar-item-link{
     text-align: center;
     margin:0 30px;
 }
-.header__navbar-item-link:hover{
-    background-color: rgb(94, 8, 8) ;
-
+.header__navbar-list .header__navbar-item:hover >a{
+    background-color: rgb(94, 8, 8);
+    transition: 0.3s all;
 }
 .active__navbar{
     background-color: rgb(94, 8, 8) ;
@@ -76,13 +76,15 @@ div.header__nav-scoffee{
     list-style-type: none;
     padding: 10px 0;
 }
-.header__navbar-list li:hover .sub-nav {
+.header__navbar-list li:hover .sub-nav{
     display: block;
 }
-.sub-nav .sub-nav-list:hover {
+.header__navbar-item .sub-nav li:hover{
     background:rgba(165, 42, 42, 0.97);
 }
 .sub-nav .sub-nav-list a{
+    display: inline-block;
+    min-width: 170px;
     text-transform: capitalize;
     margin-left: 10px;
     text-decoration: none;
