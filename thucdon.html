@@ -34,6 +34,9 @@
             margin-left: 50px;
             text-transform: capitalize;
         }
+        li.title-sidebar:nth-child(1){
+            margin-top: 40px;
+        }
         .sidebar a{
             font-size: 18px;
             color: rgba(0, 0, 0, 0.6);
@@ -42,7 +45,6 @@
             line-height: 1.5;                    
         }
         .sidebar li.icoin-style{
-            margin-top: 40px;
             list-style-image:url('images/icoin/cb.png');
             
         }
@@ -54,7 +56,7 @@
             display: none;
         }
         .collection{
-            padding: 50px 0 50px;
+            padding-top: 50px;
         }
         .product-wrap{
             position: relative;
@@ -138,7 +140,7 @@
         /* Mobile Device & Tablet Device: width <991px */
         @media only screen and (max-width: 990px){
             .grid.wide .row{
-                margin-top: 80px;
+                margin-top: 5px;
             }
             .sidebar{
                 display: none;
@@ -222,7 +224,7 @@
         /* Tablet Device */
         @media screen and (min-width: 975px) and (max-width: 1024px) {
             .grid.wide .row{
-                margin-top: 80px;   
+                margin-top: 5px;   
             }
             .sidebar{
                 display: none;
@@ -245,7 +247,7 @@
             }
             .wrap-sidebar-mobile{
                 display: block;
-                position: fixed;
+                position: sticky;
                 min-width: 740px;
                 top: 58px;
                 z-index: 888;
@@ -597,6 +599,39 @@
                         </div>
         </div>
     </div>
-    
+    <footer>
+        <div class="footer">        
+                    <div class="social">
+                        <div class="facebook">
+                                <a class="fb" href="#">
+                                    <span class="fa-brands fa-facebook-f"></span>
+                                </a>
+                            </div>
+                            <div class="instagram">
+                                <a class="ins" href="#">
+                                    <span class="fa-brands fa-instagram"></span>
+                                </a>
+                            </div>
+                            <div class="youtube">
+                                <a class="ytb" href="#">
+                                    <span class="fa-brands fa-youtube"></span>
+                                </a>
+                            </div>
+                    </div>
+                        <div class="copyright">© 2022 S.Coffee Allright Reserved</div>
+                        <div class="paperplane">
+                                <a class="register" href="#" >
+                                    <i class="fa-solid fa-paper-plane"></i>
+                                    <span class="icoin-footer" style="margin-left:15px;">  Đăng kí để nhận tin tức sớm nhất</span>
+                                </a>
+                        </div>
+                        <div class="email">
+                            <a class="sendmail" href="#">
+                                <span class="fa-solid fa-envelope" ></span>
+                                <span class="icoin-footer" style="margin-left:15px;">customerservice@scoffee.com</span>
+                            </a>
+                        </div>
+        
+    </div> </footer>
 </body>
 </html>
