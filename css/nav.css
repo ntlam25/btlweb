@@ -204,6 +204,9 @@ div.header__nav-scoffee{
         font-size:1.9rem;
         margin-right: 0px;
     }
+    div.header__nav-scoffee.mobile a{
+        color: #fff;
+    }
     .nav__bar-btn{
         display: inline-block;
     }
