@@ -55,6 +55,7 @@
 body{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman',sans-serif;
     box-sizing: border-box;
+    background-color: rgb(247,236,222);
 }
 * {
     margin: 0;
