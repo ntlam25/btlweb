@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thực đơn</title>
+    <title>Thực đơn | S.Coffee</title>
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/grid.css">
     <link rel="stylesheet" href="./css/nav.css">
@@ -29,7 +29,7 @@
             z-index: 998;
             font-size: 20px;
             top: 67px;
-            margin-left: 50px;
+            margin-left: 35px;
             text-transform: capitalize;
         }
         li.title-sidebar:nth-child(1){
@@ -138,7 +138,11 @@
         /* Mobile Device & Tablet Device: width <991px */
         @media only screen and (max-width: 990px){
             .grid.wide .row{
-                margin-top: 5px;
+                margin-top: 85px;
+            }
+            .row{
+                margin-right: 0;
+                margin-left: 0;
             }
             .sidebar{
                 display: none;
@@ -151,7 +155,7 @@
                 position: absolute;
                 z-index: 999;
                 top: 10px;
-                min-width: 710px;
+                min-width: 96%;
                 left: 2%;
                 justify-content: center;
                 font-size: 16px;
@@ -162,7 +166,8 @@
             .wrap-sidebar-mobile{
                 display: block;
                 position: fixed;
-                min-width: 740px;
+                min-width: 728px;
+                margin: 0;
                 top: 58px;
                 z-index: 888;
                 border: 1px solid #0000001c;
@@ -216,9 +221,7 @@
             }
 
             }
-             
-        }
-        
+        }        
         /* Tablet Device */
         @media screen and (min-width: 975px) and (max-width: 1024px) {
             .grid.wide .row{
@@ -287,14 +290,14 @@
     </style>
     <!-- THANH ĐIỀU HƯỚNG -->
     <div class="header">
-        <div class="header__nav-scoffee">S.COFFEE</div>
+
         <div class="grid wide">
+            <div class="header__nav-scoffee mobile">S.COFFEE</div>
             <nav class="header__navbar-pc">
-                
                 <ul class="header__navbar-list">
-                    <!-- <li class="header__navbar-item">
-                        
-                    </li> -->
+                    <li class="header__navbar-item">
+                        <div class="header__nav-scoffee pc-tablet">S.COFFEE</div>
+                    </li>
                     <li class="header__navbar-item"><a class="header__navbar-item-link" href="main.html">Trang chủ</a></li>
                     <li class="header__navbar-item">
                         <a class="header__navbar-item-link  active__navbar"  href="thucdon.html">Thực đơn</a>
