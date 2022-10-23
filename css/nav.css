@@ -94,29 +94,6 @@ a.header__navbar-item-link{
     display: table;
     clear: both;
 }
-/*#search{
-    display: none;
-    float:right;
-    z-index:999;
-    top:1%;
-    right:0;
-}
-input[type=text] {
-    display: block;
-    width: 12vw;
-    height: 26px;
-    box-sizing: border-box;
-    border: 1px solid rgb(165, 42, 42);
-    border-radius: 2.5px;
-    margin: 16px 0 16px 30px;
-    font-size: 1rem;
-    background-color: aliceblue;
-    background-image: url(/images/search.jpg);
-    background-repeat: no-repeat;
-    background-size: 22px;
-    background-position: 4px 1px;
-    padding: 5px 10px 3px 33px;
-}*/
 /*MOBILE & TABLET__NAV*/
 .nav__bar-btn {
     font-size: 40px;
@@ -140,6 +117,7 @@ input[type=text] {
     text-align: center;
     text-shadow: 4px 4px 5px rgb(92, 8, 8);
     padding:13px 0;
+    padding-top: 10px;
     font-size:1.9rem;
     margin-right: 60px;
 }
@@ -219,11 +197,13 @@ input[type=text] {
         position: absolute;
         text-shadow: 4px 4px 5px rgb(92, 8, 8);
         padding:13px 0;
+        padding-top: 10px;
         font-size:1.9rem;
         margin-right: 0px;
     }
     div.header__nav-scoffee.mobile a{
         color: #fff;
+        font-family: 'Baron Neue';
     }
     .nav__bar-btn{
         display: inline-block;
